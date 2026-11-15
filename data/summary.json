@@ -1,0 +1,524 @@
+{
+ "status": {
+  "time": "2026-11-14 20:55:29",
+  "rank": 15.0,
+  "rating": 713.0,
+  "bb100": -4.2,
+  "matches": 65.0,
+  "deployment": "infer_c5af0a968fd3"
+ },
+ "new_matches": 1,
+ "entries": {
+  "base (infer_66b2ff75a081)": {
+   "games": 40,
+   "mean_place": 3.33,
+   "wins": 10,
+   "lasts": 4,
+   "bust_rate": 0.225,
+   "bb100": 65.5,
+   "ev_bb100": 20.3,
+   "vpip": 0.392,
+   "pfr": 0.187,
+   "bigcalls100": 1.57,
+   "fallback_rate": 0.0149
+  },
+  "\ud83d\udc40 (infer_2ff17466cceb)": {
+   "games": 25,
+   "mean_place": 4.0,
+   "wins": 5,
+   "lasts": 9,
+   "bust_rate": 0.44,
+   "bb100": -147.4,
+   "ev_bb100": -94.0,
+   "vpip": 0.352,
+   "pfr": 0.157,
+   "bigcalls100": 1.14,
+   "fallback_rate": 0.0161
+  }
+ },
+ "busts": [
+  {
+   "match": "m_20261114t225919_3cd6ac",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 22,
+   "hole": [
+    "Th",
+    "6d"
+   ],
+   "chen": 1,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "8d",
+    "7s",
+    "8h",
+    "Kd",
+    "6c"
+   ]
+  },
+  {
+   "match": "m_20261114t230120_5dbf6c",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 23,
+   "hole": [
+    "Ah",
+    "3s"
+   ],
+   "chen": 5,
+   "actions": [
+    "raise",
+    "call"
+   ],
+   "board": [
+    "Ks",
+    "8c",
+    "Jh",
+    "2c",
+    "As"
+   ]
+  },
+  {
+   "match": "m_20261114t233623_2a8147",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 11,
+   "hole": [
+    "Jh",
+    "Ah"
+   ],
+   "chen": 10,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "4s",
+    "2s",
+    "7s",
+    "Js",
+    "5c"
+   ]
+  },
+  {
+   "match": "m_20261114t235426_15b7d2",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 29,
+   "hole": [
+    "Jc",
+    "Qc"
+   ],
+   "chen": 9,
+   "actions": [
+    "raise",
+    "bet",
+    "check",
+    "call"
+   ],
+   "board": [
+    "5h",
+    "Td",
+    "6c",
+    "2s",
+    "6h"
+   ]
+  },
+  {
+   "match": "m_20261115t001601_1b8159",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 10,
+   "hole": [
+    "Th",
+    "5h"
+   ],
+   "chen": 2,
+   "actions": [
+    "raise"
+   ],
+   "board": [
+    "Kd",
+    "8h",
+    "4s",
+    "3h",
+    "Ad"
+   ]
+  },
+  {
+   "match": "m_20261115t004746_71f18f",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 1,
+   "hole": [
+    "Td",
+    "9c"
+   ],
+   "chen": 6,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "Qs",
+    "5d",
+    "8s",
+    "2c",
+    "4h"
+   ]
+  },
+  {
+   "match": "m_20261115t005852_a76bce",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 16,
+   "hole": [
+    "Qh",
+    "7s"
+   ],
+   "chen": 2,
+   "actions": [
+    "call",
+    "check",
+    "call"
+   ],
+   "board": [
+    "3d",
+    "5s",
+    "3c",
+    "2c",
+    "Th"
+   ]
+  },
+  {
+   "match": "m_20261115t011625_a31bf2",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 30,
+   "hole": [
+    "Qd",
+    "3d"
+   ],
+   "chen": 4,
+   "actions": [
+    "raise"
+   ],
+   "board": [
+    "Kc",
+    "Ac",
+    "6c",
+    "9d",
+    "2c"
+   ]
+  },
+  {
+   "match": "m_20261115t012329_b6f7d3",
+   "entry": "base (infer_66b2ff75a081)",
+   "hand": 13,
+   "hole": [
+    "Jc",
+    "Ah"
+   ],
+   "chen": 8,
+   "actions": [
+    "raise",
+    "call"
+   ],
+   "board": [
+    "2d",
+    "Td",
+    "4d",
+    "2s",
+    "6d"
+   ]
+  },
+  {
+   "match": "m_20261115t015342_6c0f26",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 12,
+   "hole": [
+    "Js",
+    "6s"
+   ],
+   "chen": 3,
+   "actions": [
+    "call",
+    "check",
+    "call",
+    "bet",
+    "check",
+    "call"
+   ],
+   "board": [
+    "2c",
+    "Td",
+    "Jd",
+    "8c",
+    "Kh"
+   ]
+  },
+  {
+   "match": "m_20261115t020616_aaaaa9",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 3,
+   "hole": [
+    "8s",
+    "Jh"
+   ],
+   "chen": 4,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "Qh",
+    "7d",
+    "Ks",
+    "3d",
+    "7s"
+   ]
+  },
+  {
+   "match": "m_20261115t020922_c82792",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 16,
+   "hole": [
+    "Js",
+    "Th"
+   ],
+   "chen": 7,
+   "actions": [
+    "call",
+    "bet",
+    "bet",
+    "bet",
+    "call"
+   ],
+   "board": [
+    "Ks",
+    "Ts",
+    "Jc",
+    "2c",
+    "Ac"
+   ]
+  },
+  {
+   "match": "m_20261115t021344_102ff3",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 2,
+   "hole": [
+    "6c",
+    "6h"
+   ],
+   "chen": 6.0,
+   "actions": [
+    "call",
+    "call",
+    "raise"
+   ],
+   "board": [
+    "Ks",
+    "5s",
+    "5c",
+    "Js",
+    "8h"
+   ]
+  },
+  {
+   "match": "m_20261115t022136_ae9f6b",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 3,
+   "hole": [
+    "Qh",
+    "8d"
+   ],
+   "chen": 3,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "7s",
+    "8s",
+    "4d",
+    "Jh",
+    "9d"
+   ]
+  },
+  {
+   "match": "m_20261115t024346_941971",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 2,
+   "hole": [
+    "9h",
+    "6c"
+   ],
+   "chen": 2.5,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "4s",
+    "2c",
+    "7d",
+    "2s",
+    "Kh"
+   ]
+  },
+  {
+   "match": "m_20261115t024721_18b974",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 4,
+   "hole": [
+    "Th",
+    "Jc"
+   ],
+   "chen": 7,
+   "actions": [
+    "call",
+    "call"
+   ],
+   "board": [
+    "As",
+    "7s",
+    "4s",
+    "Kd",
+    "4h"
+   ]
+  },
+  {
+   "match": "m_20261115t034428_4093b1",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 3,
+   "hole": [
+    "Qs",
+    "Qd"
+   ],
+   "chen": 14,
+   "actions": [
+    "raise",
+    "call",
+    "call",
+    "bet",
+    "bet"
+   ],
+   "board": [
+    "2c",
+    "4s",
+    "5d",
+    "6h",
+    "8h"
+   ]
+  },
+  {
+   "match": "m_20261115t040211_53d67e",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 30,
+   "hole": [
+    "Jd",
+    "Ks"
+   ],
+   "chen": 7,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "7h",
+    "Jc",
+    "Qs",
+    "6d",
+    "6h"
+   ]
+  },
+  {
+   "match": "m_20261115t040251_2888c0",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 14,
+   "hole": [
+    "6d",
+    "Kc"
+   ],
+   "chen": 3,
+   "actions": [
+    "raise"
+   ],
+   "board": [
+    "Qh",
+    "Ac",
+    "Kh",
+    "4c",
+    "3c"
+   ]
+  },
+  {
+   "match": "m_20261115t043951_2413dc",
+   "entry": "\ud83d\udc40 (infer_2ff17466cceb)",
+   "hand": 19,
+   "hole": [
+    "5d",
+    "5s"
+   ],
+   "chen": 5,
+   "actions": [
+    "call",
+    "call",
+    "check",
+    "raise",
+    "call",
+    "bet",
+    "check",
+    "call"
+   ],
+   "board": [
+    "2s",
+    "Kd",
+    "8c",
+    "4d",
+    "Jd"
+   ]
+  }
+ ],
+ "weak_busts": 16,
+ "total_busts": 20,
+ "experiments": [],
+ "replays": [
+  {
+   "id": "m_20261115t043951_2413dc",
+   "label": "11-15 04:39 UTC \u00b7 place 6 \u00b7 -100 bb"
+  },
+  {
+   "id": "m_20261115t040432_f27eae",
+   "label": "11-15 04:04 UTC \u00b7 place 5 \u00b7 -24 bb"
+  },
+  {
+   "id": "m_20261115t040352_6acb87",
+   "label": "11-15 04:03 UTC \u00b7 place 1 \u00b7 +92 bb"
+  },
+  {
+   "id": "m_20261115t040332_699f3e",
+   "label": "11-15 04:03 UTC \u00b7 place 2 \u00b7 +18 bb"
+  },
+  {
+   "id": "m_20261115t040312_0f42ec",
+   "label": "11-15 04:03 UTC \u00b7 place 6 \u00b7 -65 bb"
+  },
+  {
+   "id": "m_20261115t040251_2888c0",
+   "label": "11-15 04:02 UTC \u00b7 place 6 \u00b7 -100 bb"
+  },
+  {
+   "id": "m_20261115t040211_53d67e",
+   "label": "11-15 04:02 UTC \u00b7 place 6 \u00b7 -100 bb"
+  },
+  {
+   "id": "m_20261115t034428_4093b1",
+   "label": "11-15 03:44 UTC \u00b7 place 6 \u00b7 -100 bb"
+  },
+  {
+   "id": "m_20261115t034330_baea81",
+   "label": "11-15 03:43 UTC \u00b7 place 6 \u00b7 -40 bb"
+  },
+  {
+   "id": "m_20261115t024721_18b974",
+   "label": "11-15 02:47 UTC \u00b7 place 6 \u00b7 -100 bb"
+  },
+  {
+   "id": "m_20261115t024346_941971",
+   "label": "11-15 02:43 UTC \u00b7 place 6 \u00b7 -100 bb"
+  },
+  {
+   "id": "m_20261115t023658_77ebfc",
+   "label": "11-15 02:36 UTC \u00b7 place 1 \u00b7 +67 bb"
+  }
+ ]
+}
