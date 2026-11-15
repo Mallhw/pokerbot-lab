@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 00:27:14",
+  "time": "2026-11-15 01:27:15",
   "rank": 7.0,
-  "rating": 1133.0,
-  "bb100": -0.6,
-  "matches": 182.0,
+  "rating": 1102.0,
+  "bb100": -2.5,
+  "matches": 215.0,
   "deployment": "infer_496116c2999d"
  },
- "new_matches": 12,
+ "new_matches": 10,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -62,17 +62,17 @@
    "fallback_rate": 0.0054
   },
   "opsd4-s30 (infer_496116c2999d)": {
-   "games": 10,
-   "mean_place": 3.0,
-   "wins": 1,
-   "lasts": 0,
-   "bust_rate": 0.1,
-   "bb100": 52.6,
-   "ev_bb100": 43.4,
-   "vpip": 0.151,
-   "pfr": 0.102,
-   "bigcalls100": 0.35,
-   "fallback_rate": 0.0111
+   "games": 43,
+   "mean_place": 3.44,
+   "wins": 3,
+   "lasts": 3,
+   "bust_rate": 0.116,
+   "bb100": 2.9,
+   "ev_bb100": 29.9,
+   "vpip": 0.145,
+   "pfr": 0.099,
+   "bigcalls100": 0.42,
+   "fallback_rate": 0.0189
   }
  },
  "busts": [
@@ -679,10 +679,94 @@
     "Ac",
     "Qd"
    ]
+  },
+  {
+   "match": "m_20261115t082817_1064a7",
+   "entry": "opsd4-s30 (infer_496116c2999d)",
+   "hand": 3,
+   "hole": [
+    "As",
+    "Th"
+   ],
+   "chen": 6,
+   "actions": [
+    "raise",
+    "call",
+    "check",
+    "bet"
+   ],
+   "board": [
+    "5c",
+    "Kh",
+    "4h",
+    "6d",
+    "2d"
+   ]
+  },
+  {
+   "match": "m_20261115t083120_bf9dfd",
+   "entry": "opsd4-s30 (infer_496116c2999d)",
+   "hand": 8,
+   "hole": [
+    "Jc",
+    "Jh"
+   ],
+   "chen": 12,
+   "actions": [
+    "raise",
+    "call"
+   ],
+   "board": [
+    "Ad",
+    "8d",
+    "Kd",
+    "5c",
+    "3h"
+   ]
+  },
+  {
+   "match": "m_20261115t090728_de564f",
+   "entry": "opsd4-s30 (infer_496116c2999d)",
+   "hand": 7,
+   "hole": [
+    "Qs",
+    "As"
+   ],
+   "chen": 11,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "3c",
+    "5h",
+    "6c",
+    "4c",
+    "9h"
+   ]
+  },
+  {
+   "match": "m_20261115t091734_031585",
+   "entry": "opsd4-s30 (infer_496116c2999d)",
+   "hand": 14,
+   "hole": [
+    "Ah",
+    "2s"
+   ],
+   "chen": 5,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "3c",
+    "Jh",
+    "Kh",
+    "Ks",
+    "5s"
+   ]
   }
  ],
- "weak_busts": 18,
- "total_busts": 28,
+ "weak_busts": 20,
+ "total_busts": 32,
  "experiments": [
   {
    "time": "2026-11-14 21:02:11",
@@ -827,56 +911,92 @@
    "name": "check-in 00:28",
    "kind": "ops",
    "result": "RL train_63646e72d9bc: 314 rollouts, 0 failed, mean reward 9.37. Arena rank #7 rating 1133; v4 s29 10 games avg place 3.0. Deleted 3 idle teammate deployments (base-t1, base-t2, ho-af0ee9-step20; no evals running); deployed base + v4s30-eval copy for sh-select eval."
+  },
+  {
+   "time": "2026-11-15 00:59:18",
+   "name": "RL step 10 (ckpt_52d6b4b511f4) on sh-select",
+   "kind": "eval",
+   "result": "running; deployed as vals-hackathon-matt/rl-s10 (infer_96d341a589e2)"
+  },
+  {
+   "time": "2026-11-15 00:59:18",
+   "name": "leaderboard snapshot 00:55",
+   "kind": "arena",
+   "result": "pineapple #8 (1096), #4 among LLM teams; top 4 are house bots (Pete 1396 TAG, Carlos 1251 LAG, Alice 1216 nit, Tim 1161); best LLM Accord 1147 (VPIP 29/PFR 17). v4 folds 90% vs raises -> exploited by aggressive bots"
+  },
+  {
+   "time": "2026-11-15 01:31:42",
+   "name": "sh-select comparison 01:30",
+   "kind": "eval",
+   "result": "base 8.845 / busts 13.6 / weak 15.4 / fmt 2.6%; v4-s29 9.003 / 4.6 / 4.8 / 3.2% (eval_44490d61c2c5); RL-s10 (349h) 9.471 / 3.72 / 2.87 / 1.0% -> best so far; VPIP 10% (very tight)"
+  },
+  {
+   "time": "2026-11-15 01:36:37",
+   "name": "incident: deleted v4s30-eval while feature evals used it",
+   "kind": "ops",
+   "result": "~01:20-01:40 14% policy decisions failed in games12-* evals; redeployed same name (infer_ac58d18d0a7d); games.py now drops infra-failed games. rl-s20 eval stopped to free the GPU (retest later)."
+  },
+  {
+   "time": "2026-11-15 01:36:37",
+   "name": "opponent profiles (215 games)",
+   "kind": "analysis",
+   "result": "Bob shove 33%; Stan limp 46% / post-agg 0.05 (station); Alice VPIP 4% / showdown Chen 11 (nit); Carlos 43/32 3bet 15% river-bluff 67%; Pete 32/23; LLM teams fold to raises 70-93%; Martingale loose + river bluffs 64%; \ud83e\udd75 nit 8%. See lab/data/profiles.json"
+  },
+  {
+   "time": "2026-11-15 01:41:44",
+   "name": "RL step 10 full sh-select + play_local",
+   "kind": "eval",
+   "result": "score 9.397 (v4 9.003), busts 4.4/100, weak 3.4/100, fmt 0.89%, EV +1.32 (paired +1.23+-1.33 vs v4); play_local 0/17 failed -> BEST CANDIDATE, submit as Alea iacta est"
   }
  ],
  "replays": [
   {
-   "id": "m_20261115t075813_52c410",
-   "label": "11-15 07:58 UTC \u00b7 place 2 \u00b7 +83 bb"
+   "id": "m_20261115t091734_031585",
+   "label": "11-15 09:17 UTC \u00b7 place 4 \u00b7 -100 bb"
   },
   {
-   "id": "m_20261115t075758_69c118",
-   "label": "11-15 07:57 UTC \u00b7 place 5 \u00b7 -100 bb"
+   "id": "m_20261115t090945_851896",
+   "label": "11-15 09:09 UTC \u00b7 place 1 \u00b7 +266 bb"
   },
   {
-   "id": "m_20261115t075743_cfa66b",
-   "label": "11-15 07:57 UTC \u00b7 place 3 \u00b7 +36 bb"
+   "id": "m_20261115t090915_b13436",
+   "label": "11-15 09:09 UTC \u00b7 place 2 \u00b7 -16 bb"
   },
   {
-   "id": "m_20261115t075730_2b642f",
-   "label": "11-15 07:57 UTC \u00b7 place 2 \u00b7 +6 bb"
+   "id": "m_20261115t090829_132749",
+   "label": "11-15 09:08 UTC \u00b7 place 4 \u00b7 -10 bb"
   },
   {
-   "id": "m_20261115t075712_0913e1",
-   "label": "11-15 07:57 UTC \u00b7 place 1 \u00b7 +121 bb"
+   "id": "m_20261115t090728_de564f",
+   "label": "11-15 09:07 UTC \u00b7 place 6 \u00b7 -100 bb"
   },
   {
-   "id": "m_20261115t075652_ff43d0",
-   "label": "11-15 07:56 UTC \u00b7 place 2 \u00b7 +13 bb"
+   "id": "m_20261115t085403_de46a3",
+   "label": "11-15 08:54 UTC \u00b7 place 3 \u00b7 -6 bb"
   },
   {
-   "id": "m_20261115t075637_bd502a",
-   "label": "11-15 07:56 UTC \u00b7 place 4 \u00b7 -1 bb"
+   "id": "m_20261115t085031_343a88",
+   "label": "11-15 08:50 UTC \u00b7 place 3 \u00b7 +4 bb"
   },
   {
-   "id": "m_20261115t075622_83f888",
-   "label": "11-15 07:56 UTC \u00b7 place 3 \u00b7 -2 bb"
+   "id": "m_20261115t084745_5f9cee",
+   "label": "11-15 08:47 UTC \u00b7 place 2 \u00b7 +30 bb"
   },
   {
-   "id": "m_20261115t075607_7c3aa9",
-   "label": "11-15 07:56 UTC \u00b7 place 4 \u00b7 +2 bb"
+   "id": "m_20261115t084659_2dfe6e",
+   "label": "11-15 08:46 UTC \u00b7 place 1 \u00b7 +50 bb"
   },
   {
-   "id": "m_20261115t075552_4bda00",
-   "label": "11-15 07:55 UTC \u00b7 place 4 \u00b7 -8 bb"
+   "id": "m_20261115t084125_921782",
+   "label": "11-15 08:41 UTC \u00b7 place 2 \u00b7 +94 bb"
   },
   {
-   "id": "m_20261115t075535_6b72de",
-   "label": "11-15 07:55 UTC \u00b7 place 1 \u00b7 +80 bb"
+   "id": "m_20261115t084110_5c47a9",
+   "label": "11-15 08:41 UTC \u00b7 place 6 \u00b7 -64 bb"
   },
   {
-   "id": "m_20261115t075523_ab1398",
-   "label": "11-15 07:55 UTC \u00b7 place 2 \u00b7 +6 bb"
+   "id": "m_20261115t083738_6b3806",
+   "label": "11-15 08:37 UTC \u00b7 place 5 \u00b7 -18 bb"
   }
  ]
 }
