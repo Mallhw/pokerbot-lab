@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 02:26:11",
-  "rank": 11.0,
-  "rating": 1045.0,
-  "bb100": -5.7,
-  "matches": 263.0,
-  "deployment": "infer_96d341a589e2"
+  "time": "2026-11-15 02:28:49",
+  "rank": 12.0,
+  "rating": 1034.0,
+  "bb100": -6.0,
+  "matches": 264.0,
+  "deployment": "infer_496116c2999d"
  },
- "new_matches": 19,
+ "new_matches": 1,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -75,17 +75,17 @@
    "fallback_rate": 0.0179
   },
   "butter (infer_96d341a589e2)": {
-   "games": 22,
-   "mean_place": 3.64,
+   "games": 23,
+   "mean_place": 3.7,
    "wins": 0,
    "lasts": 4,
-   "bust_rate": 0.227,
-   "bb100": -77.9,
-   "ev_bb100": 21.8,
-   "vpip": 0.149,
+   "bust_rate": 0.217,
+   "bb100": -78.2,
+   "ev_bb100": 16.6,
+   "vpip": 0.15,
    "pfr": 0.096,
-   "bigcalls100": 1.01,
-   "fallback_rate": 0.0093
+   "bigcalls100": 0.96,
+   "fallback_rate": 0.0089
   }
  },
  "busts": [
@@ -1151,9 +1151,25 @@
    "name": "iteration #1: butter vs v4 in arena + per-opponent analysis",
    "kind": "decision",
    "result": "REVERT candidate to v4 (opsd4-s30): butter bust 23% vs 10%, 0 wins in 22 games; RL overfit to 2-shover bot tables (calls JJ 4-way, 77, T6o vs shoves). We beat passive opps (+400 Martingale/Stan), lose to aggressive (Carlos -188, fold 16:4). Next: notes v7, RL v2 realistic tables."
+  },
+  {
+   "time": "2026-11-15 02:27:35",
+   "name": "games12-v7 (notes used at decision time + maniac defense + multiway all-in rule)",
+   "kind": "eval",
+   "result": "running (02:33); compare vs control eval_aea14fba8798, notes, v5 eval_832ce52f3280"
+  },
+  {
+   "time": "2026-11-15 02:31:28",
+   "name": "check-in 02:30",
+   "kind": "ops",
+   "result": "v4 live again (auto-submitted 02:28). butter final 23g bust 22% 0 wins. Built pokerbots-rl2 (realistic: base LLM + 1 shover + 1 maniac, bust_penalty 3) for RL v2 after v6. Pending: v6 train, rl-s40 / v5 / v7 evals."
   }
  ],
  "replays": [
+  {
+   "id": "m_20261115t101515_5261ac",
+   "label": "11-15 10:15 UTC \u00b7 place 5 \u00b7 -26 bb"
+  },
   {
    "id": "m_20261115t100941_74d3c6",
    "label": "11-15 10:09 UTC \u00b7 place 6 \u00b7 -100 bb"
@@ -1197,10 +1213,6 @@
   {
    "id": "m_20261115t095616_8ab294",
    "label": "11-15 09:56 UTC \u00b7 place 3 \u00b7 -100 bb"
-  },
-  {
-   "id": "m_20261115t095601_1c84e7",
-   "label": "11-15 09:56 UTC \u00b7 place 6 \u00b7 -30 bb"
   }
  ]
 }
