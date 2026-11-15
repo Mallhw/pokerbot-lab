@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 02:28:49",
-  "rank": 12.0,
-  "rating": 1034.0,
-  "bb100": -6.0,
-  "matches": 264.0,
+  "time": "2026-11-15 02:41:24",
+  "rank": 11.0,
+  "rating": 1077.0,
+  "bb100": -4.2,
+  "matches": 275.0,
   "deployment": "infer_496116c2999d"
  },
- "new_matches": 1,
+ "new_matches": 11,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -75,17 +75,17 @@
    "fallback_rate": 0.0179
   },
   "butter (infer_96d341a589e2)": {
-   "games": 23,
-   "mean_place": 3.7,
-   "wins": 0,
+   "games": 34,
+   "mean_place": 3.5,
+   "wins": 1,
    "lasts": 4,
-   "bust_rate": 0.217,
-   "bb100": -78.2,
-   "ev_bb100": 16.6,
-   "vpip": 0.15,
-   "pfr": 0.096,
-   "bigcalls100": 0.96,
-   "fallback_rate": 0.0089
+   "bust_rate": 0.147,
+   "bb100": -39.4,
+   "ev_bb100": 23.5,
+   "vpip": 0.142,
+   "pfr": 0.091,
+   "bigcalls100": 0.63,
+   "fallback_rate": 0.0065
   }
  },
  "busts": [
@@ -1163,56 +1163,74 @@
    "name": "check-in 02:30",
    "kind": "ops",
    "result": "v4 live again (auto-submitted 02:28). butter final 23g bust 22% 0 wins. Built pokerbots-rl2 (realistic: base LLM + 1 shover + 1 maniac, bust_penalty 3) for RL v2 after v6. Pending: v6 train, rl-s40 / v5 / v7 evals."
+  },
+  {
+   "time": "2026-11-15 02:37:19",
+   "name": "scouting reports + talk experiments",
+   "kind": "feature",
+   "result": "lab/scouting.py -> matthewli.org/pokerbot-lab/scouting.html (worst: Accord -561 BB, we fold 63 vs 25). Talk: harness2 policy_talk injection; chaos + bluff-talk games12 variants auto-launch after v5/v7 (vals-poker-matt2/lab/pipeline_talk.sh, log ~/Worker/logs/pipeline_talk.log)."
+  },
+  {
+   "time": "2026-11-15 02:48:16",
+   "name": "v4 preflop over-folding analysis",
+   "kind": "analysis",
+   "result": "folds 90% to small raises (<=3BB) ~ same as to all-ins; BB vs small raise folds 85% (std 40-55%); unopened CO 87%, BTN 72%; folded AK on BTN vs 3BB, KQs/JTs in BB, 99 in SB unopened. Cause: price-blind (any raise = strength), v4 survival rules over-generalized from all-ins to all raises, Qwen cautious, single-hand reward favors folding. Fix added to v8: price-aware preflop + BB defense + never fold premiums to small raises."
+  },
+  {
+   "time": "2026-11-15 02:56:37",
+   "name": "paired games12 comparison (18 games done by all variants)",
+   "kind": "eval",
+   "result": "place CIs +-0.6-0.8 (too noisy); chips/busts: notes 298/1 vs control 204/3 (best), endgame 235/1, v5 strict notes 247/2 place +0.44 (worse; flagged shover 3/36), talk 213/1, short 220/2. Simple notes > strict notes. Risk: v6 trained with v5-style notes."
   }
  ],
  "replays": [
+  {
+   "id": "m_20261115t102220_cfc8a2",
+   "label": "11-15 10:22 UTC \u00b7 place 4 \u00b7 -6 bb"
+  },
+  {
+   "id": "m_20261115t102104_63e8d1",
+   "label": "11-15 10:21 UTC \u00b7 place 3 \u00b7 +29 bb"
+  },
+  {
+   "id": "m_20261115t101747_3e92cd",
+   "label": "11-15 10:17 UTC \u00b7 place 2 \u00b7 +50 bb"
+  },
+  {
+   "id": "m_20261115t101732_839752",
+   "label": "11-15 10:17 UTC \u00b7 place 2 \u00b7 +29 bb"
+  },
   {
    "id": "m_20261115t101515_5261ac",
    "label": "11-15 10:15 UTC \u00b7 place 5 \u00b7 -26 bb"
   },
   {
+   "id": "m_20261115t101500_9a1d01",
+   "label": "11-15 10:15 UTC \u00b7 place 2 \u00b7 +20 bb"
+  },
+  {
+   "id": "m_20261115t101430_7b47e1",
+   "label": "11-15 10:14 UTC \u00b7 place 4 \u00b7 -6 bb"
+  },
+  {
+   "id": "m_20261115t101400_43d3a7",
+   "label": "11-15 10:14 UTC \u00b7 place 5 \u00b7 -24 bb"
+  },
+  {
+   "id": "m_20261115t101329_3dae68",
+   "label": "11-15 10:13 UTC \u00b7 place 4 \u00b7 -26 bb"
+  },
+  {
+   "id": "m_20261115t101314_959250",
+   "label": "11-15 10:13 UTC \u00b7 place 2 \u00b7 +13 bb"
+  },
+  {
+   "id": "m_20261115t101259_f139d7",
+   "label": "11-15 10:12 UTC \u00b7 place 1 \u00b7 +38 bb"
+  },
+  {
    "id": "m_20261115t100941_74d3c6",
    "label": "11-15 10:09 UTC \u00b7 place 6 \u00b7 -100 bb"
-  },
-  {
-   "id": "m_20261115t100708_5d9778",
-   "label": "11-15 10:07 UTC \u00b7 place 5 \u00b7 +4 bb"
-  },
-  {
-   "id": "m_20261115t100623_0f3a6b",
-   "label": "11-15 10:06 UTC \u00b7 place 3 \u00b7 -2 bb"
-  },
-  {
-   "id": "m_20261115t100120_bce986",
-   "label": "11-15 10:01 UTC \u00b7 place 5 \u00b7 -18 bb"
-  },
-  {
-   "id": "m_20261115t100049_a07061",
-   "label": "11-15 10:00 UTC \u00b7 place 3 \u00b7 -100 bb"
-  },
-  {
-   "id": "m_20261115t100005_0c64ec",
-   "label": "11-15 10:00 UTC \u00b7 place 6 \u00b7 -100 bb"
-  },
-  {
-   "id": "m_20261115t095918_b527ff",
-   "label": "11-15 09:59 UTC \u00b7 place 5 \u00b7 -18 bb"
-  },
-  {
-   "id": "m_20261115t095802_f75404",
-   "label": "11-15 09:58 UTC \u00b7 place 2 \u00b7 +18 bb"
-  },
-  {
-   "id": "m_20261115t095702_ca8178",
-   "label": "11-15 09:57 UTC \u00b7 place 3 \u00b7 +23 bb"
-  },
-  {
-   "id": "m_20261115t095631_8d7d1b",
-   "label": "11-15 09:56 UTC \u00b7 place 4 \u00b7 -4 bb"
-  },
-  {
-   "id": "m_20261115t095616_8ab294",
-   "label": "11-15 09:56 UTC \u00b7 place 3 \u00b7 -100 bb"
   }
  ]
 }
