@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-14 22:22:46",
-  "rank": 14.0,
-  "rating": 946.0,
-  "bb100": -4.2,
-  "matches": 99.0,
+  "time": "2026-11-14 22:28:57",
+  "rank": 15.0,
+  "rating": 895.0,
+  "bb100": -5.4,
+  "matches": 106.0,
   "deployment": "infer_5fe0799751ef"
  },
- "new_matches": 12,
+ "new_matches": 8,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -49,17 +49,17 @@
    "fallback_rate": 0.3108
   },
   "solver-GRPO step 21 (54.7% agree) (infer_5fe0799751ef)": {
-   "games": 18,
-   "mean_place": 3.33,
-   "wins": 2,
-   "lasts": 3,
-   "bust_rate": 0.0,
-   "bb100": 41.5,
-   "ev_bb100": 44.3,
+   "games": 26,
+   "mean_place": 3.69,
+   "wins": 3,
+   "lasts": 5,
+   "bust_rate": 0.038,
+   "bb100": 21.0,
+   "ev_bb100": 22.8,
    "vpip": 0.224,
-   "pfr": 0.096,
-   "bigcalls100": 0.74,
-   "fallback_rate": 0.0063
+   "pfr": 0.094,
+   "bigcalls100": 0.64,
+   "fallback_rate": 0.0079
   }
  },
  "busts": [
@@ -580,10 +580,33 @@
     "Th",
     "9h"
    ]
+  },
+  {
+   "match": "m_20261115t060724_35cf92",
+   "entry": "solver-GRPO step 21 (54.7% agree) (infer_5fe0799751ef)",
+   "hand": 30,
+   "hole": [
+    "Js",
+    "Jc"
+   ],
+   "chen": 12,
+   "actions": [
+    "raise",
+    "bet",
+    "bet",
+    "bet"
+   ],
+   "board": [
+    "6h",
+    "5h",
+    "Tc",
+    "Ks",
+    "Td"
+   ]
   }
  ],
  "weak_busts": 17,
- "total_busts": 24,
+ "total_busts": 25,
  "experiments": [
   {
    "time": "2026-11-14 21:02:11",
@@ -648,6 +671,38 @@
  ],
  "replays": [
   {
+   "id": "m_20261115t060825_4b0928",
+   "label": "11-15 06:08 UTC \u00b7 place 5 \u00b7 -12 bb"
+  },
+  {
+   "id": "m_20261115t060810_d58d64",
+   "label": "11-15 06:08 UTC \u00b7 place 5 \u00b7 -24 bb"
+  },
+  {
+   "id": "m_20261115t060754_6cbfb7",
+   "label": "11-15 06:07 UTC \u00b7 place 1 \u00b7 +150 bb"
+  },
+  {
+   "id": "m_20261115t060724_35cf92",
+   "label": "11-15 06:07 UTC \u00b7 place 6 \u00b7 -100 bb"
+  },
+  {
+   "id": "m_20261115t060709_5f0630",
+   "label": "11-15 06:07 UTC \u00b7 place 4 \u00b7 -11 bb"
+  },
+  {
+   "id": "m_20261115t060553_da2085",
+   "label": "11-15 06:05 UTC \u00b7 place 6 \u00b7 -18 bb"
+  },
+  {
+   "id": "m_20261115t060538_6e2ed3",
+   "label": "11-15 06:05 UTC \u00b7 place 5 \u00b7 -18 bb"
+  },
+  {
+   "id": "m_20261115t060523_5f67a6",
+   "label": "11-15 06:05 UTC \u00b7 place 4 \u00b7 -26 bb"
+  },
+  {
    "id": "m_20261115t055348_996ab4",
    "label": "11-15 05:53 UTC \u00b7 place 6 \u00b7 -42 bb"
   },
@@ -662,38 +717,6 @@
   {
    "id": "m_20261115t055230_c56e27",
    "label": "11-15 05:52 UTC \u00b7 place 4 \u00b7 -12 bb"
-  },
-  {
-   "id": "m_20261115t055208_58e6fa",
-   "label": "11-15 05:52 UTC \u00b7 place 5 \u00b7 -27 bb"
-  },
-  {
-   "id": "m_20261115t055147_c499be",
-   "label": "11-15 05:51 UTC \u00b7 place 6 \u00b7 -60 bb"
-  },
-  {
-   "id": "m_20261115t053329_3e1588",
-   "label": "11-15 05:33 UTC \u00b7 place 3 \u00b7 +0 bb"
-  },
-  {
-   "id": "m_20261115t052805_a262c0",
-   "label": "11-15 05:28 UTC \u00b7 place 2 \u00b7 +43 bb"
-  },
-  {
-   "id": "m_20261115t052745_82e234",
-   "label": "11-15 05:27 UTC \u00b7 place 1 \u00b7 +172 bb"
-  },
-  {
-   "id": "m_20261115t052605_6603d2",
-   "label": "11-15 05:26 UTC \u00b7 place 1 \u00b7 +136 bb"
-  },
-  {
-   "id": "m_20261115t052504_5817a2",
-   "label": "11-15 05:25 UTC \u00b7 place 3 \u00b7 -36 bb"
-  },
-  {
-   "id": "m_20261115t052343_8812a3",
-   "label": "11-15 05:23 UTC \u00b7 place 4 \u00b7 -5 bb"
   }
  ]
 }
