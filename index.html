@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pokerbot Lab</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--mute:#8b949e;--felt:#0f5132;--felt2:#0b3d26;--gold:#e3b341;--red:#f85149;--green:#3fb950;--blue:#58a6ff}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f6f8fa;--panel:#fff;--line:#d0d7de;--text:#1f2328;--mute:#57606a}}
+:root[data-theme="dark"]{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--mute:#8b949e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:24px 16px 8px;max-width:1100px;margin:auto}h1{margin:0;font-size:26px}h2{font-size:18px;margin:0 0 12px}
+.sub{color:var(--mute)}main{max-width:1100px;margin:auto;padding:8px 16px 48px;display:grid;gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;overflow:hidden}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}.kpi b{display:block;font-size:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.kpi span{color:var(--mute);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--mute);font-weight:600}
+.scroll{overflow-x:auto}.bad{color:var(--red)}.good{color:var(--green)}
+#table{position:relative;width:100%;aspect-ratio:16/10;max-height:520px;background:radial-gradient(ellipse at center,var(--felt) 0%,var(--felt2) 70%);border:10px solid #5a3a1f;border-radius:50%/40%;margin:8px 0}
+.seat{position:absolute;transform:translate(-50%,-50%);text-align:center;font-size:12px;min-width:92px;background:rgba(0,0,0,.55);color:#fff;border-radius:10px;padding:6px 8px;border:2px solid transparent;transition:border-color .2s,opacity .2s}
+.seat.us{border-color:var(--gold)}.seat.act{border-color:var(--blue);box-shadow:0 0 12px var(--blue)}.seat.out{opacity:.35}
+.seat .nm{font-weight:700;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.seat .stk{color:var(--gold)}.seat .ac{min-height:16px;color:#cde;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cards{display:flex;gap:3px;justify-content:center;margin:3px 0}.c{width:24px;height:34px;border-radius:4px;background:#fff;color:#111;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center}
+.c.r{color:#c0392b}.c.back{background:repeating-linear-gradient(45deg,#2a4b8d,#2a4b8d 4px,#1e3a70 4px,#1e3a70 8px)}
+#board{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);display:flex;gap:5px}#board .c{width:34px;height:48px;font-size:15px}
+#pot{position:absolute;left:50%;top:62%;transform:translate(-50%,-50%);color:var(--gold);font-weight:700}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}button,select{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit;cursor:pointer;max-width:100%}
+#log{font-size:12px;color:var(--mute);max-height:120px;overflow:auto;margin-top:8px}
+@media (max-width:600px){.seat{min-width:64px;font-size:10px;padding:4px}.c{width:18px;height:26px;font-size:10px}#board .c{width:24px;height:34px;font-size:12px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Pokerbot Lab <span class="sub">· team pineapple</span></h1>
+  <div class="sub" id="updated">Vals × Applied Compute poker arena: 6-max no-limit hold'em, 30-hand elimination games.</div>
+</header>
+<main>
+  <section class="kpis" id="kpis"></section>
+  <section class="card"><h2>Arena rating over time</h2><canvas id="ratingChart" height="90"></canvas><div class="sub" id="noRating"></div></section>
+  <section class="card"><h2>Arena results by entry</h2><div class="scroll"><table id="entries"></table></div></section>
+  <section class="card"><h2>Hand replay</h2>
+    <div class="ctrl"><select id="matchSel"></select><button id="prevH">◀ hand</button><button id="play">▶ play</button><button id="nextH">hand ▶</button>
+      <select id="speed"><option value="900">1×</option><option value="450">2×</option><option value="200">4×</option></select><span class="sub" id="hlabel"></span></div>
+    <div id="table"><div id="board"></div><div id="pot"></div></div>
+    <div id="log"></div>
+  </section>
+  <section class="card"><h2>Experiments</h2><div class="scroll"><table id="exps"></table></div></section>
+  <section class="card"><h2>How it busts</h2><div class="sub">Final hands of games where pineapple lost its whole stack.</div><div class="scroll"><table id="busts"></table></div></section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const fmt=(v,d=1)=>v==null?'—':(typeof v==='number'?(+v).toFixed(d):v);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const card=c=>{const red='hd'.includes(c[1]);const s={h:'♥',d:'♦',c:'♣',s:'♠'}[c[1]];return `<div class="c${red?' r':''}">${c[0].replace('T','10')}${s}</div>`};
+const back='<div class="c back"></div>';
+async function j(u){try{const r=await fetch(u,{cache:'no-store'});return r.ok?r.json():null}catch(e){return null}}
+(async()=>{
+  const S=await j('data/summary.json')||{};const H=await j('data/history.json')||[];
+  const st=S.status||{};if(st.time)$('#updated').textContent+=` Updated ${st.time} (Pacific).`;
+  const ents=Object.entries(S.entries||{});const cur=ents.find(([k])=>k.includes(st.deployment||'@@'));
+  const k=[['Rank',st.rank?'#'+st.rank:'—'],['Rating',fmt(st.rating,0)],['Ranked games',fmt(st.matches,0)],['Busts (all games)',S.total_busts??'—'],
+    ['Busts with weak hands',S.weak_busts??'—'],['Current entry',cur?cur[0].split(' (')[0]:(st.deployment||'—')]];
+  $('#kpis').innerHTML=k.map(([a,b])=>`<div class="kpi"><span>${a}</span><b>${esc(b)}</b></div>`).join('');
+  const pts=H.filter(h=>h.rating);
+  if(pts.length>1&&window.Chart)new Chart($('#ratingChart'),{type:'line',data:{labels:pts.map(p=>p.time.slice(5,16)),datasets:[{label:'rating',data:pts.map(p=>p.rating),borderColor:'#58a6ff',tension:.25,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:{ticks:{maxTicksLimit:8}}}}});
+  else $('#noRating').textContent='Collecting rating history…';
+  const cols=[['games','Games',0],['mean_place','Avg place',2],['wins','1st',0],['lasts','6th',0],['bust_rate','Bust rate',0],['ev_bb100','EV bb/100',0],['bb100','bb/100',0],['vpip','VPIP',0],['pfr','PFR',0],['bigcalls100','Big calls/100',2],['fallback_rate','Fallbacks',1]];
+  const pct=new Set(['bust_rate','vpip','pfr','fallback_rate']);
+  $('#entries').innerHTML='<tr><th>Entry</th>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr>'+ents.map(([n,v])=>'<tr><td>'+esc(n.split(' (')[0])+'</td>'+cols.map(([key,,d])=>{const x=v[key];const t=pct.has(key)?fmt(100*x,d)+'%':fmt(x,d);const cl=key==='bust_rate'&&x>.3?'bad':key==='ev_bb100'?(x>0?'good':'bad'):'';return `<td class="${cl}">${t}</td>`}).join('')+'</tr>').join('');
+  const E=S.experiments||[];$('#exps').innerHTML='<tr><th>When</th><th>Experiment</th><th>Result</th></tr>'+(E.length?E.slice().reverse().map(e=>`<tr><td>${esc(e.time)}</td><td>${esc(e.name||e.kind)}</td><td>${esc(e.result)}</td></tr>`).join(''):'<tr><td colspan=3 class="sub">none yet</td></tr>');
+  const B=(S.busts||[]).slice().reverse().slice(0,25);$('#busts').innerHTML='<tr><th>Match</th><th>Hand #</th><th>Cards</th><th>Strength</th><th>Its actions</th><th>Board</th></tr>'+B.map(b=>`<tr><td>${esc(b.match.slice(-6))}</td><td>${b.hand}</td><td>${esc(b.hole.join(' '))}</td><td class="${b.chen<8?'bad':''}">${b.chen<8?'weak':'ok'} (${b.chen})</td><td>${esc(b.actions.join(', '))}</td><td>${esc((b.board||[]).join(' '))}</td></tr>`).join('');
+  const R=S.replays||[];$('#matchSel').innerHTML=R.map(r=>`<option value="${esc(r.id)}">${esc(r.label)}</option>`).join('');
+  if(R.length)loadMatch(R[0].id);$('#matchSel').onchange=e=>loadMatch(e.target.value);
+})();
+let M=null,hi=0,ai=0,timer=null;
+const POS=[[50,88],[13,70],[13,30],[50,12],[87,30],[87,70]];
+async function loadMatch(id){M=await j(`data/replays/${id}.json`);hi=0;stop();if(M)showHand(true)}
+function seatName(i){return (M.seats.find(s=>s.seat===i)||{}).name||('seat '+i)}
+function showHand(reset){const h=M.hands[hi];if(reset)ai=0;const t=$('#table');t.querySelectorAll('.seat').forEach(e=>e.remove());
+  const stacks={};h.players.forEach(p=>stacks[p.seat]=p.starting_stack);let pot=0;const last={};const folded=new Set();let board=[];
+  Object.entries(h.blinds||{}).forEach(([s,b])=>{stacks[s]-=b;pot+=b;last[s]='blind '+b});
+  for(let i=0;i<ai;i++){const a=h.actions[i];pot=a.pot_before+Math.max(0,stacks[a.seat]-a.stack_after);stacks[a.seat]=a.stack_after;last[a.seat]=a.action+(a.amount?' '+a.amount:'')+(a.say?` “${a.say}”`:'');if(a.action==='fold')folded.add(a.seat);board=a.board||board}
+  const done=ai>=h.actions.length;if(done)board=h.board||board;
+  const cur=h.actions[ai];
+  h.players.forEach(p=>{const [x,y]=POS[p.seat%6];const d=document.createElement('div');const us=p.seat===M.us;
+    const show=us||(done&&h.shown&&h.shown[p.seat]);const out=p.starting_stack<=0;
+    d.className='seat'+(us?' us':'')+(cur&&cur.seat===p.seat&&!done?' act':'')+((out||folded.has(p.seat))?' out':'');d.style.left=x+'%';d.style.top=y+'%';
+    const delta=done&&h.deltas?h.deltas[p.seat]:null;
+    d.innerHTML=`<div class="nm">${us?'★ ':''}${esc(seatName(p.seat))}${p.seat===h.button_seat?' (D)':''}</div><div class="cards">${out?'':(show?p.hole_cards.map(card).join(''):back+back)}</div><div class="stk">${out?'out':(done&&delta!=null?(p.starting_stack+delta)+` (${delta>=0?'+':''}${delta})`:stacks[p.seat])}</div><div class="ac">${esc(last[p.seat]||'')}</div>`;t.appendChild(d)});
+  $('#board').innerHTML=(board||[]).map(card).join('');$('#pot').textContent=done?'':'pot '+pot;
+  $('#hlabel').textContent=`hand ${h.hand_number} of ${M.hands.length}`;
+  $('#log').innerHTML=h.actions.slice(0,ai).map(a=>`${a.street}: ${esc(seatName(a.seat))} ${a.action}${a.amount?' '+a.amount:''}`).reverse().join('<br>')}
+function step(){if(!M)return;const h=M.hands[hi];if(ai<h.actions.length){ai++;showHand()}else if(hi<M.hands.length-1){hi++;showHand(true)}else stop()}
+function stop(){clearInterval(timer);timer=null;$('#play').textContent='▶ play'}
+$('#play').onclick=()=>{if(timer)return stop();timer=setInterval(step,+$('#speed').value);$('#play').textContent='❚❚ pause'};
+$('#speed').onchange=()=>{if(timer){stop();$('#play').click()}};
+$('#nextH').onclick=()=>{if(M&&hi<M.hands.length-1){hi++;showHand(true)}};$('#prevH').onclick=()=>{if(M&&hi>0){hi--;showHand(true)}};
+</script>
+</body>
+</html>
