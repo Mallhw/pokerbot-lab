@@ -1361,12 +1361,6 @@
  "experiments": [
   {
    "time": "2026-11-14 21:05:57",
-   "name": "base on pokerbots-mb-select (500 hands)",
-   "kind": "eval",
-   "result": "mean score 9.461, EV +0.39 BB/hand (+-1.73), format err 0.36%/decision, busts 0.6/100 hands"
-  },
-  {
-   "time": "2026-11-14 21:05:57",
    "name": "OPSD dataset pokerbots-opsd-v3 (hint v3, from eval_29f9d8cd0fce)",
    "kind": "dataset",
    "result": "1114 decisions"
@@ -1718,6 +1712,12 @@
    "name": "v12 result + v13 launched",
    "kind": "eval",
    "result": "v12 inconclusive (paired 15/15/6, +60+-41; rule never triggered: no in-range hands vs shover). v13 (steal/BB defend/push-fold) eval_50b5db16ad59 vs v10 eval_da78b93972ac"
+  },
+  {
+   "time": "2026-11-15 12:21:32",
+   "name": "v13 result (steal/BB defend/push-fold)",
+   "kind": "eval",
+   "result": "DROP: place 3.33 vs 3.11, chips 186 vs 201, fallbacks 5.3% vs 2.7%, PFR down 18->14% (rules ignored); paired diffs = noise"
   }
  ],
  "replays": [
