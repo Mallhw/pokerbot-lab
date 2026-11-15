@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 13:27:15",
-  "rank": 2.0,
-  "rating": 1191.0,
-  "bb100": 9.9,
-  "matches": 719.0,
-  "deployment": "infer_1daa9f6ac6d3"
+  "time": "2026-11-15 14:27:17",
+  "rank": 12.0,
+  "rating": 1059.0,
+  "bb100": 7.4,
+  "matches": 767.0,
+  "deployment": "infer_a5aaffeb4304"
  },
- "new_matches": 34,
+ "new_matches": 49,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -140,17 +140,30 @@
    "fallback_rate": 0.0124
   },
   "final round step 20 (small-pot reward) (infer_1daa9f6ac6d3)": {
-   "games": 27,
-   "mean_place": 3.19,
-   "wins": 7,
-   "lasts": 4,
-   "bust_rate": 0.037,
-   "bb100": 72.6,
-   "ev_bb100": 67.4,
-   "vpip": 0.21,
-   "pfr": 0.167,
-   "bigcalls100": 0.89,
-   "fallback_rate": 0.0071
+   "games": 60,
+   "mean_place": 3.78,
+   "wins": 8,
+   "lasts": 15,
+   "bust_rate": 0.033,
+   "bb100": 13.2,
+   "ev_bb100": 18.6,
+   "vpip": 0.207,
+   "pfr": 0.168,
+   "bigcalls100": 0.51,
+   "fallback_rate": 0.0065
+  },
+  "ho-e07e40-step20 (infer_a5aaffeb4304)": {
+   "games": 16,
+   "mean_place": 3.06,
+   "wins": 4,
+   "lasts": 1,
+   "bust_rate": 0.062,
+   "bb100": -10.8,
+   "ev_bb100": 24.5,
+   "vpip": 0.299,
+   "pfr": 0.224,
+   "bigcalls100": 0.43,
+   "fallback_rate": 0.0169
   }
  },
  "busts": [
@@ -1456,17 +1469,54 @@
     "Qh",
     "3c"
    ]
+  },
+  {
+   "match": "m_20261115t213017_c8dad9",
+   "entry": "final round step 20 (small-pot reward) (infer_1daa9f6ac6d3)",
+   "hand": 19,
+   "hole": [
+    "Jd",
+    "Kh"
+   ],
+   "chen": 7,
+   "actions": [
+    "call",
+    "raise",
+    "call",
+    "raise"
+   ],
+   "board": [
+    "Kc",
+    "Ts",
+    "4s",
+    "4h",
+    "6s"
+   ]
+  },
+  {
+   "match": "m_20261115t215006_c42c02",
+   "entry": "ho-e07e40-step20 (infer_a5aaffeb4304)",
+   "hand": 18,
+   "hole": [
+    "Ah",
+    "7s"
+   ],
+   "chen": 5,
+   "actions": [
+    "raise"
+   ],
+   "board": [
+    "Td",
+    "Qd",
+    "Kc",
+    "9d",
+    "Ad"
+   ]
   }
  ],
- "weak_busts": 37,
- "total_busts": 61,
+ "weak_busts": 39,
+ "total_busts": 63,
  "experiments": [
-  {
-   "time": "2026-11-14 21:28:08",
-   "name": "eval of live arena entry (solver-spot step 10) on sh-select",
-   "kind": "eval",
-   "result": "INVALID: 78% HTTP 502; my 32-game eval overloaded the live deployment and caused 17-31 arena fallbacks/game in 4 games. Rule added: never eval live deployments directly."
-  },
   {
    "time": "2026-11-14 21:32:37",
    "name": "base on pokerbots-sh-select (shover+maniac tables, 500 hands)",
@@ -1820,56 +1870,62 @@
    "name": "check-in 13:30",
    "kind": "arena",
    "result": "team #2 1191; final-round s20 live 27 games place 3.19 EV +67; talk s20 final 76 games place 2.93 (best); report section 8 added"
+  },
+  {
+   "time": "2026-11-15 14:27:49",
+   "name": "check-in 14:30",
+   "kind": "arena",
+   "result": "team #12 1059; final-round s20 collapsed (late 33 games place 4.39, fades); talk s20 back live"
   }
  ],
  "replays": [
   {
-   "id": "m_20261115t211321_39b76f",
-   "label": "11-15 21:13 UTC \u00b7 place 6 \u00b7 -100 bb"
+   "id": "m_20261115t220537_d8dee6",
+   "label": "11-15 22:05 UTC \u00b7 place 1 \u00b7 +9 bb"
   },
   {
-   "id": "m_20261115t211219_39fe57",
-   "label": "11-15 21:12 UTC \u00b7 place 2 \u00b7 +3 bb"
+   "id": "m_20261115t220350_88b7e5",
+   "label": "11-15 22:03 UTC \u00b7 place 4 \u00b7 -12 bb"
   },
   {
-   "id": "m_20261115t211103_e262e0",
-   "label": "11-15 21:11 UTC \u00b7 place 3 \u00b7 -0 bb"
+   "id": "m_20261115t220118_9003c5",
+   "label": "11-15 22:01 UTC \u00b7 place 3 \u00b7 -11 bb"
   },
   {
-   "id": "m_20261115t210600_8b6641",
-   "label": "11-15 21:06 UTC \u00b7 place 4 \u00b7 -6 bb"
+   "id": "m_20261115t220103_075734",
+   "label": "11-15 22:01 UTC \u00b7 place 3 \u00b7 +16 bb"
   },
   {
-   "id": "m_20261115t210229_319318",
-   "label": "11-15 21:02 UTC \u00b7 place 4 \u00b7 +0 bb"
+   "id": "m_20261115t215122_658a75",
+   "label": "11-15 21:51 UTC \u00b7 place 1 \u00b7 +17 bb"
   },
   {
-   "id": "m_20261115t210212_9f8f68",
-   "label": "11-15 21:02 UTC \u00b7 place 6 \u00b7 -8 bb"
+   "id": "m_20261115t215107_d42ec5",
+   "label": "11-15 21:51 UTC \u00b7 place 1 \u00b7 +40 bb"
   },
   {
-   "id": "m_20261115t210142_1725a7",
-   "label": "11-15 21:01 UTC \u00b7 place 3 \u00b7 +2 bb"
+   "id": "m_20261115t215052_77a501",
+   "label": "11-15 21:50 UTC \u00b7 place 5 \u00b7 -100 bb"
   },
   {
-   "id": "m_20261115t210112_867147",
-   "label": "11-15 21:01 UTC \u00b7 place 6 \u00b7 -67 bb"
+   "id": "m_20261115t215037_6f4720",
+   "label": "11-15 21:50 UTC \u00b7 place 4 \u00b7 -18 bb"
   },
   {
-   "id": "m_20261115t210057_829340",
-   "label": "11-15 21:00 UTC \u00b7 place 1 \u00b7 +99 bb"
+   "id": "m_20261115t215022_0f9770",
+   "label": "11-15 21:50 UTC \u00b7 place 1 \u00b7 +55 bb"
   },
   {
-   "id": "m_20261115t210026_e74b80",
-   "label": "11-15 21:00 UTC \u00b7 place 2 \u00b7 +30 bb"
+   "id": "m_20261115t215006_c42c02",
+   "label": "11-15 21:50 UTC \u00b7 place 5 \u00b7 -100 bb"
   },
   {
-   "id": "m_20261115t205956_a436cb",
-   "label": "11-15 20:59 UTC \u00b7 place 2 \u00b7 +21 bb"
+   "id": "m_20261115t214951_4911e7",
+   "label": "11-15 21:49 UTC \u00b7 place 2 \u00b7 +18 bb"
   },
   {
-   "id": "m_20261115t205842_ba99ce",
-   "label": "11-15 20:58 UTC \u00b7 place 5 \u00b7 -21 bb"
+   "id": "m_20261115t214936_853e7a",
+   "label": "11-15 21:49 UTC \u00b7 place 3 \u00b7 +35 bb"
   }
  ]
 }
