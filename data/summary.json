@@ -1360,12 +1360,6 @@
  "total_busts": 57,
  "experiments": [
   {
-   "time": "2026-11-14 21:02:11",
-   "name": "local hint v2 (format fix), same 6 seeds",
-   "kind": "local",
-   "result": "0/64 format errors (fixed); 2 busts (KK call-off on hand 1 = allowed; one other), -115.5 BB"
-  },
-  {
    "time": "2026-11-14 21:05:57",
    "name": "base on pokerbots-mb-select (500 hands)",
    "kind": "eval",
@@ -1718,6 +1712,12 @@
    "name": "check-in 11:30",
    "kind": "ops",
    "result": "teammate live entry now talk round step 20 (infer_a5aaffeb4304), 12 games place 3.33 EV -31.5; team #13 1056. RL v3 preempted 3rd time without ckpt, paused. v12/v10 evals running."
+  },
+  {
+   "time": "2026-11-15 11:31:05",
+   "name": "v12 result + v13 launched",
+   "kind": "eval",
+   "result": "v12 inconclusive (paired 15/15/6, +60+-41; rule never triggered: no in-range hands vs shover). v13 (steal/BB defend/push-fold) eval_50b5db16ad59 vs v10 eval_da78b93972ac"
   }
  ],
  "replays": [
