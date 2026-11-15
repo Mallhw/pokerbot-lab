@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-14 22:33:45",
-  "rank": 15.0,
-  "rating": 930.0,
-  "bb100": -3.5,
-  "matches": 109.0,
+  "time": "2026-11-14 23:18:17",
+  "rank": 13.0,
+  "rating": 981.0,
+  "bb100": -9.7,
+  "matches": 128.0,
   "deployment": "infer_5fe0799751ef"
  },
- "new_matches": 3,
+ "new_matches": 18,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -49,17 +49,17 @@
    "fallback_rate": 0.3108
   },
   "solver-GRPO step 21 (54.7% agree) (infer_5fe0799751ef)": {
-   "games": 29,
-   "mean_place": 3.66,
-   "wins": 3,
-   "lasts": 5,
-   "bust_rate": 0.034,
-   "bb100": 24.5,
-   "ev_bb100": 26.2,
-   "vpip": 0.223,
-   "pfr": 0.086,
-   "bigcalls100": 0.57,
-   "fallback_rate": 0.007
+   "games": 47,
+   "mean_place": 3.68,
+   "wins": 6,
+   "lasts": 6,
+   "bust_rate": 0.021,
+   "bb100": 5.7,
+   "ev_bb100": 5.2,
+   "vpip": 0.227,
+   "pfr": 0.096,
+   "bigcalls100": 0.43,
+   "fallback_rate": 0.0057
   }
  },
  "busts": [
@@ -679,56 +679,74 @@
    "name": "arena analysis: live solver-spot step 20 (29 games, 870 hands)",
    "kind": "analysis",
    "result": "1 bust (J3s call-off), avg place ~3.7; weak-tight: open-raise 12% vs limp 14%, 3-bet 3%, 0 postflop raises, BTN -19.5 BB, wins 69% of showdowns (folds too much), calls down middle pairs. Fix = hint v4 (no limping, steals, value)."
+  },
+  {
+   "time": "2026-11-14 22:48:56",
+   "name": "stopped teammate solver-spot RL (train_1a76d7af0ee9) per user",
+   "kind": "ops",
+   "result": "all rollouts failing since ~step 20 (DNS/ConnectError on their harness); 20711/47379 failed; ckpts 10/20 kept"
+  },
+  {
+   "time": "2026-11-14 22:48:56",
+   "name": "OPSD v4mix (hint v4 = v3 + steals/no-limp/value, 1861 decisions, 30 steps)",
+   "kind": "train",
+   "result": "submitted 22:48, runs alongside v3mix (train_f485ce511a1a)"
+  },
+  {
+   "time": "2026-11-14 23:08:42",
+   "name": "stopped OPSD v3mix (train_f485ce511a1a) to run v4 only",
+   "kind": "ops",
+   "result": "user: just do v4; teammates took 2 GPUs (base-t1/t2) so v3+v4 could not run together"
   }
  ],
  "replays": [
   {
-   "id": "m_20261115t060825_4b0928",
-   "label": "11-15 06:08 UTC \u00b7 place 5 \u00b7 -12 bb"
+   "id": "m_20261115t065006_40ec97",
+   "label": "11-15 06:50 UTC \u00b7 place 5 \u00b7 -19 bb"
   },
   {
-   "id": "m_20261115t060810_d58d64",
-   "label": "11-15 06:08 UTC \u00b7 place 5 \u00b7 -24 bb"
+   "id": "m_20261115t064849_4ef1f0",
+   "label": "11-15 06:48 UTC \u00b7 place 1 \u00b7 +16 bb"
   },
   {
-   "id": "m_20261115t060754_6cbfb7",
-   "label": "11-15 06:07 UTC \u00b7 place 1 \u00b7 +150 bb"
+   "id": "m_20261115t064734_66b61f",
+   "label": "11-15 06:47 UTC \u00b7 place 5 \u00b7 -4 bb"
   },
   {
-   "id": "m_20261115t060724_35cf92",
-   "label": "11-15 06:07 UTC \u00b7 place 6 \u00b7 -100 bb"
+   "id": "m_20261115t064214_bb932f",
+   "label": "11-15 06:42 UTC \u00b7 place 5 \u00b7 -10 bb"
   },
   {
-   "id": "m_20261115t060709_5f0630",
-   "label": "11-15 06:07 UTC \u00b7 place 4 \u00b7 -11 bb"
+   "id": "m_20261115t064043_c3aaa8",
+   "label": "11-15 06:40 UTC \u00b7 place 6 \u00b7 -66 bb"
   },
   {
-   "id": "m_20261115t060608_d5c352",
-   "label": "11-15 06:06 UTC \u00b7 place 5 \u00b7 -0 bb"
+   "id": "m_20261115t064027_40e3d9",
+   "label": "11-15 06:40 UTC \u00b7 place 1 \u00b7 +19 bb"
   },
   {
-   "id": "m_20261115t060553_da2085",
-   "label": "11-15 06:05 UTC \u00b7 place 6 \u00b7 -18 bb"
+   "id": "m_20261115t063322_292301",
+   "label": "11-15 06:33 UTC \u00b7 place 1 \u00b7 +28 bb"
   },
   {
-   "id": "m_20261115t060538_6e2ed3",
-   "label": "11-15 06:05 UTC \u00b7 place 5 \u00b7 -18 bb"
+   "id": "m_20261115t063307_9a2c78",
+   "label": "11-15 06:33 UTC \u00b7 place 5 \u00b7 -6 bb"
   },
   {
-   "id": "m_20261115t060523_5f67a6",
-   "label": "11-15 06:05 UTC \u00b7 place 4 \u00b7 -26 bb"
+   "id": "m_20261115t063252_e51a35",
+   "label": "11-15 06:32 UTC \u00b7 place 5 \u00b7 -33 bb"
   },
   {
-   "id": "m_20261115t060508_2f27d3",
-   "label": "11-15 06:05 UTC \u00b7 place 2 \u00b7 +50 bb"
+   "id": "m_20261115t062748_384ae2",
+   "label": "11-15 06:27 UTC \u00b7 place 4 \u00b7 -19 bb"
   },
   {
-   "id": "m_20261115t060452_4f5c62",
-   "label": "11-15 06:04 UTC \u00b7 place 3 \u00b7 +0 bb"
+   "id": "m_20261115t062717_0848fa",
+   "label": "11-15 06:27 UTC \u00b7 place 5 \u00b7 -34 bb"
   },
   {
-   "id": "m_20261115t055348_996ab4",
-   "label": "11-15 05:53 UTC \u00b7 place 6 \u00b7 -42 bb"
+   "id": "m_20261115t062702_c7dc68",
+   "label": "11-15 06:27 UTC \u00b7 place 3 \u00b7 +9 bb"
   }
  ]
 }
