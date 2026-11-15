@@ -1,14 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 07:27:09",
-  "rank": 11.0,
-  "rating": 1071.0,
-  "bb100": -4.5,
-  "matches": 290.0,
-  "deployment": "infer_496116c2999d",
-  "site_unavailable": true
+  "time": "2026-11-15 08:27:11",
+  "rank": 6.0,
+  "rating": 1142.0,
+  "bb100": -0.8,
+  "matches": 492.0,
+  "deployment": "infer_f617937bbaa3"
  },
- "new_matches": 0,
+ "new_matches": 13,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -89,17 +88,17 @@
    "fallback_rate": 0.0064
   },
   "Alea iacta est (infer_496116c2999d)": {
-   "games": 13,
-   "mean_place": 3.38,
-   "wins": 0,
-   "lasts": 2,
-   "bust_rate": 0.077,
-   "bb100": -4.5,
-   "ev_bb100": 10.3,
+   "games": 216,
+   "mean_place": 3.34,
+   "wins": 25,
+   "lasts": 29,
+   "bust_rate": 0.032,
+   "bb100": 3.5,
+   "ev_bb100": 6.6,
    "vpip": 0.154,
-   "pfr": 0.115,
-   "bigcalls100": 0.26,
-   "fallback_rate": 0.0125
+   "pfr": 0.101,
+   "bigcalls100": 0.16,
+   "fallback_rate": 0.0186
   }
  },
  "busts": [
@@ -959,10 +958,137 @@
     "Kh",
     "7c"
    ]
+  },
+  {
+   "match": "m_20261115t110434_2c1023",
+   "entry": "Alea iacta est (infer_496116c2999d)",
+   "hand": 17,
+   "hole": [
+    "6c",
+    "3h"
+   ],
+   "chen": 1.0,
+   "actions": [
+    "call"
+   ],
+   "board": [
+    "7s",
+    "Tc",
+    "4s",
+    "4h",
+    "Ts"
+   ]
+  },
+  {
+   "match": "m_20261115t115719_791dfb",
+   "entry": "Alea iacta est (infer_496116c2999d)",
+   "hand": 28,
+   "hole": [
+    "Qs",
+    "Ks"
+   ],
+   "chen": 10,
+   "actions": [
+    "raise",
+    "call"
+   ],
+   "board": [
+    "9c",
+    "7d",
+    "8h",
+    "6h",
+    "6s"
+   ]
+  },
+  {
+   "match": "m_20261115t120036_958420",
+   "entry": "Alea iacta est (infer_496116c2999d)",
+   "hand": 18,
+   "hole": [
+    "Ad",
+    "4h"
+   ],
+   "chen": 5,
+   "actions": [
+    "raise"
+   ],
+   "board": [
+    "5d",
+    "Ks",
+    "As",
+    "9c",
+    "8h"
+   ]
+  },
+  {
+   "match": "m_20261115t120424_7e694a",
+   "entry": "Alea iacta est (infer_496116c2999d)",
+   "hand": 6,
+   "hole": [
+    "Ts",
+    "Ad"
+   ],
+   "chen": 6,
+   "actions": [
+    "call",
+    "call",
+    "bet",
+    "call",
+    "bet",
+    "call"
+   ],
+   "board": [
+    "4d",
+    "Kc",
+    "Th",
+    "3s",
+    "8d"
+   ]
+  },
+  {
+   "match": "m_20261115t152442_9a064f",
+   "entry": "Alea iacta est (infer_496116c2999d)",
+   "hand": 12,
+   "hole": [
+    "Ks",
+    "Kc"
+   ],
+   "chen": 16,
+   "actions": [
+    "raise",
+    "call"
+   ],
+   "board": [
+    "Qh",
+    "Jh",
+    "9c",
+    "6c",
+    "7s"
+   ]
+  },
+  {
+   "match": "m_20261115t160016_00038d",
+   "entry": "Alea iacta est (infer_496116c2999d)",
+   "hand": 25,
+   "hole": [
+    "3h",
+    "6s"
+   ],
+   "chen": 1.0,
+   "actions": [
+    "raise"
+   ],
+   "board": [
+    "2s",
+    "2h",
+    "Th",
+    "Jh",
+    "8h"
+   ]
   }
  ],
- "weak_busts": 24,
- "total_busts": 40,
+ "weak_busts": 28,
+ "total_busts": 46,
  "experiments": [
   {
    "time": "2026-11-14 21:02:11",
@@ -1275,56 +1401,68 @@
    "name": "07:30 check-in",
    "kind": "ops",
    "result": "arena site down, v10-s9 not yet submitted. Resumed v10 OPSD (steps 10-19) non-preemptible train_35aab3c2c9a8 -> v10-s19. RL v2 stops were likely AC2 preemption; added --non-preemptible to rl/opsd train.py."
+  },
+  {
+   "time": "2026-11-15 08:21:50",
+   "name": "v10-s9 live",
+   "kind": "ops",
+   "result": "Chrome session submitted v10-s9 08:18 (infer_f617937bbaa3); team #5 rating 1155 at 08:21; v4 cumulative 203 games place 3.34 bust 3%"
+  },
+  {
+   "time": "2026-11-15 08:25:49",
+   "name": "RL v3 from v10-s9 launched",
+   "kind": "train",
+   "result": "train_29d356cee24f on pokerbots-rl2 (LLM opps + shover + maniac, bust_penalty 3), 30 steps; auto-eval as rl3-s30"
   }
  ],
  "replays": [
   {
-   "id": "m_20261115t104250_528892",
-   "label": "11-15 10:42 UTC \u00b7 place 2 \u00b7 -2 bb"
+   "id": "m_20261115t160940_c0c3fb",
+   "label": "11-15 16:09 UTC \u00b7 place 2 \u00b7 +10 bb"
   },
   {
-   "id": "m_20261115t103243_725e1e",
-   "label": "11-15 10:32 UTC \u00b7 place 2 \u00b7 +4 bb"
+   "id": "m_20261115t160033_69f005",
+   "label": "11-15 16:00 UTC \u00b7 place 5 \u00b7 -10 bb"
   },
   {
-   "id": "m_20261115t103228_7e12e0",
-   "label": "11-15 10:32 UTC \u00b7 place 6 \u00b7 -36 bb"
+   "id": "m_20261115t160016_00038d",
+   "label": "11-15 16:00 UTC \u00b7 place 6 \u00b7 -100 bb"
   },
   {
-   "id": "m_20261115t103212_0034dc",
-   "label": "11-15 10:32 UTC \u00b7 place 2 \u00b7 +18 bb"
+   "id": "m_20261115t160001_7bdc3b",
+   "label": "11-15 16:00 UTC \u00b7 place 4 \u00b7 -14 bb"
   },
   {
-   "id": "m_20261115t103157_062ee8",
-   "label": "11-15 10:31 UTC \u00b7 place 2 \u00b7 +34 bb"
+   "id": "m_20261115t155946_45e863",
+   "label": "11-15 15:59 UTC \u00b7 place 2 \u00b7 +10 bb"
   },
   {
-   "id": "m_20261115t103142_21a6b9",
-   "label": "11-15 10:31 UTC \u00b7 place 2 \u00b7 +71 bb"
+   "id": "m_20261115t155931_4b9dd9",
+   "label": "11-15 15:59 UTC \u00b7 place 1 \u00b7 +10 bb"
   },
   {
-   "id": "m_20261115t103127_645cf0",
-   "label": "11-15 10:31 UTC \u00b7 place 3 \u00b7 +2 bb"
+   "id": "m_20261115t155846_40f699",
+   "label": "11-15 15:58 UTC \u00b7 place 2 \u00b7 +32 bb"
   },
   {
-   "id": "m_20261115t103112_aba2ac",
-   "label": "11-15 10:31 UTC \u00b7 place 5 \u00b7 -100 bb"
+   "id": "m_20261115t155830_479b9c",
+   "label": "11-15 15:58 UTC \u00b7 place 1 \u00b7 +18 bb"
   },
   {
-   "id": "m_20261115t103056_16cb18",
-   "label": "11-15 10:30 UTC \u00b7 place 6 \u00b7 -60 bb"
+   "id": "m_20261115t155803_06e56f",
+   "label": "11-15 15:58 UTC \u00b7 place 3 \u00b7 -2 bb"
   },
   {
-   "id": "m_20261115t102956_1a227b",
-   "label": "11-15 10:29 UTC \u00b7 place 5 \u00b7 -25 bb"
+   "id": "m_20261115t155730_db3094",
+   "label": "11-15 15:57 UTC \u00b7 place 3 \u00b7 -2 bb"
   },
   {
-   "id": "m_20261115t102925_ffb9f2",
-   "label": "11-15 10:29 UTC \u00b7 place 5 \u00b7 -13 bb"
+   "id": "m_20261115t155715_5ee5d0",
+   "label": "11-15 15:57 UTC \u00b7 place 5 \u00b7 -18 bb"
   },
   {
-   "id": "m_20261115t102910_734112",
-   "label": "11-15 10:29 UTC \u00b7 place 2 \u00b7 +33 bb"
+   "id": "m_20261115t155644_9a594f",
+   "label": "11-15 15:56 UTC \u00b7 place 4 \u00b7 -0 bb"
   }
  ]
 }
