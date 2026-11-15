@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 14:27:17",
+  "time": "2026-11-15 15:27:05",
   "rank": 12.0,
   "rating": 1059.0,
   "bb100": 7.4,
   "matches": 767.0,
   "deployment": "infer_a5aaffeb4304"
  },
- "new_matches": 49,
+ "new_matches": 0,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -1519,12 +1519,6 @@
  "experiments": [
   {
    "time": "2026-11-14 21:32:37",
-   "name": "base on pokerbots-sh-select (shover+maniac tables, 500 hands)",
-   "kind": "eval",
-   "result": "mean score 8.845, busts 13.6/100 hands, weak 100BB call-offs 15.4/100, format err 2.6% (17 token-cap hits) -> reproduces arena leak"
-  },
-  {
-   "time": "2026-11-14 21:32:37",
    "name": "OPSD v3mix (hint v3, 1861 decisions incl. 747 from shover tables, 30 steps)",
    "kind": "train",
    "result": "submitted 21:32, queued (replaces train_f4dce31ab4bf)"
@@ -1876,6 +1870,12 @@
    "name": "check-in 14:30",
    "kind": "arena",
    "result": "team #12 1059; final-round s20 collapsed (late 33 games place 4.39, fades); talk s20 back live"
+  },
+  {
+   "time": "2026-11-15 15:27:37",
+   "name": "ranked ladder stopped",
+   "kind": "arena",
+   "result": "no ranked games since ~14:07 PT, exhibition only; pineapple 8th of 11 teams, rating 1059 (Accord 1238 first)"
   }
  ],
  "replays": [
