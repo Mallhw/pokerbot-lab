@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 00:18:26",
-  "rank": 8.0,
-  "rating": 1095.0,
-  "bb100": -8.1,
-  "matches": 170.0,
+  "time": "2026-11-15 00:27:14",
+  "rank": 7.0,
+  "rating": 1133.0,
+  "bb100": -0.6,
+  "matches": 182.0,
   "deployment": "infer_496116c2999d"
  },
- "new_matches": 16,
+ "new_matches": 12,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -49,30 +49,30 @@
    "fallback_rate": 0.3108
   },
   "solver-GRPO step 21 (54.7% agree) (infer_5fe0799751ef)": {
-   "games": 82,
-   "mean_place": 3.68,
-   "wins": 9,
-   "lasts": 10,
-   "bust_rate": 0.037,
-   "bb100": -2.2,
-   "ev_bb100": 2.2,
+   "games": 92,
+   "mean_place": 3.65,
+   "wins": 11,
+   "lasts": 11,
+   "bust_rate": 0.033,
+   "bb100": 4.8,
+   "ev_bb100": 8.7,
    "vpip": 0.22,
-   "pfr": 0.092,
-   "bigcalls100": 0.37,
-   "fallback_rate": 0.0059
+   "pfr": 0.094,
+   "bigcalls100": 0.33,
+   "fallback_rate": 0.0054
   },
   "opsd4-s30 (infer_496116c2999d)": {
-   "games": 8,
-   "mean_place": 3.25,
-   "wins": 0,
+   "games": 10,
+   "mean_place": 3.0,
+   "wins": 1,
    "lasts": 0,
-   "bust_rate": 0.125,
-   "bb100": -3.1,
-   "ev_bb100": -23.4,
-   "vpip": 0.138,
-   "pfr": 0.098,
-   "bigcalls100": 0.44,
-   "fallback_rate": 0.0148
+   "bust_rate": 0.1,
+   "bb100": 52.6,
+   "ev_bb100": 43.4,
+   "vpip": 0.151,
+   "pfr": 0.102,
+   "bigcalls100": 0.35,
+   "fallback_rate": 0.0111
   }
  },
  "busts": [
@@ -821,6 +821,12 @@
    "name": "GRPO from v4 s29 on bot tables (2 shovers, maniac, nit, station, random), bust-penalty grader, 40 steps",
    "kind": "train",
    "result": "running 00:21"
+  },
+  {
+   "time": "2026-11-15 00:28:11",
+   "name": "check-in 00:28",
+   "kind": "ops",
+   "result": "RL train_63646e72d9bc: 314 rollouts, 0 failed, mean reward 9.37. Arena rank #7 rating 1133; v4 s29 10 games avg place 3.0. Deleted 3 idle teammate deployments (base-t1, base-t2, ho-af0ee9-step20; no evals running); deployed base + v4s30-eval copy for sh-select eval."
   }
  ],
  "replays": [
@@ -833,8 +839,16 @@
    "label": "11-15 07:57 UTC \u00b7 place 5 \u00b7 -100 bb"
   },
   {
+   "id": "m_20261115t075743_cfa66b",
+   "label": "11-15 07:57 UTC \u00b7 place 3 \u00b7 +36 bb"
+  },
+  {
    "id": "m_20261115t075730_2b642f",
    "label": "11-15 07:57 UTC \u00b7 place 2 \u00b7 +6 bb"
+  },
+  {
+   "id": "m_20261115t075712_0913e1",
+   "label": "11-15 07:57 UTC \u00b7 place 1 \u00b7 +121 bb"
   },
   {
    "id": "m_20261115t075652_ff43d0",
@@ -857,20 +871,12 @@
    "label": "11-15 07:55 UTC \u00b7 place 4 \u00b7 -8 bb"
   },
   {
+   "id": "m_20261115t075535_6b72de",
+   "label": "11-15 07:55 UTC \u00b7 place 1 \u00b7 +80 bb"
+  },
+  {
    "id": "m_20261115t075523_ab1398",
    "label": "11-15 07:55 UTC \u00b7 place 2 \u00b7 +6 bb"
-  },
-  {
-   "id": "m_20261115t075421_769fd6",
-   "label": "11-15 07:54 UTC \u00b7 place 4 \u00b7 -10 bb"
-  },
-  {
-   "id": "m_20261115t075110_96b5fb",
-   "label": "11-15 07:51 UTC \u00b7 place 2 \u00b7 +12 bb"
-  },
-  {
-   "id": "m_20261115t075038_bc6052",
-   "label": "11-15 07:50 UTC \u00b7 place 4 \u00b7 -4 bb"
   }
  ]
 }
