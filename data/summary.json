@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 00:09:28",
+  "time": "2026-11-15 00:09:51",
   "rank": 12.0,
   "rating": 1015.0,
   "bb100": -10.1,
   "matches": 154.0,
   "deployment": "infer_496116c2999d"
  },
- "new_matches": 18,
+ "new_matches": 0,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -751,6 +751,18 @@
    "name": "OPSD v4mix finished",
    "kind": "train",
    "result": "30 steps; deployed s30 (infer_496116c2999d), s20 (infer_eb929696902d) for check + sh-select eval"
+  },
+  {
+   "time": "2026-11-15 00:09:30",
+   "name": "v4 ckpts on pokerbots-sh-select",
+   "kind": "eval",
+   "result": "running (00:10)"
+  },
+  {
+   "time": "2026-11-15 00:10:04",
+   "name": "v4 step 29 (opsd4-s30) went live in arena ~00:08",
+   "kind": "arena",
+   "result": "stopped its sh-select eval immediately to avoid overloading the live deployment; s20 eval (separate deployment) continues"
   }
  ],
  "replays": [
