@@ -947,6 +947,24 @@
    "name": "RL step 10 full sh-select + play_local",
    "kind": "eval",
    "result": "score 9.397 (v4 9.003), busts 4.4/100, weak 3.4/100, fmt 0.89%, EV +1.32 (paired +1.23+-1.33 vs v4); play_local 0/17 failed -> BEST CANDIDATE, submit as Alea iacta est"
+  },
+  {
+   "time": "2026-11-15 01:43:05",
+   "name": "scratchpad analysis (games12 control vs notes)",
+   "kind": "analysis",
+   "result": "uses ~330-400 of 5000 chars; control writes recaps/lessons, profiles seats in 7/32 games; notes variant profiles in 28/29 but labels from 1-2 hands; true shover correctly flagged 10/29 (notes) vs 3/32 (control), 3 false shover labels. v5: exact per-seat counters, min-sample before labels, behavior signatures from profiles.json, use more space."
+  },
+  {
+   "time": "2026-11-15 01:55:08",
+   "name": "games12-v5 (v4 model + v5 notes/profiles/steals prompt)",
+   "kind": "eval",
+   "result": "running"
+  },
+  {
+   "time": "2026-11-15 01:57:22",
+   "name": "feature A/B results (games12, v4 policy, 19-24 clean games each)",
+   "kind": "eval",
+   "result": "control place 2.96 chips 220 bust 17%; talk 2.90/240/10% (model talked only 1.2%, opp fold 54% vs 52% -> no effect, DROP); notes 2.76/318/5% (KEEP); short 3.26/209/16% (DROP); endgame 2.62/272/8% (KEEP). Next: v6 = v4 + v5 notes block + endgame block -> OPSD on best RL ckpt."
   }
  ],
  "replays": [
