@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-14 22:28:57",
+  "time": "2026-11-14 22:33:45",
   "rank": 15.0,
-  "rating": 895.0,
-  "bb100": -5.4,
-  "matches": 106.0,
+  "rating": 930.0,
+  "bb100": -3.5,
+  "matches": 109.0,
   "deployment": "infer_5fe0799751ef"
  },
- "new_matches": 8,
+ "new_matches": 3,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -49,17 +49,17 @@
    "fallback_rate": 0.3108
   },
   "solver-GRPO step 21 (54.7% agree) (infer_5fe0799751ef)": {
-   "games": 26,
-   "mean_place": 3.69,
+   "games": 29,
+   "mean_place": 3.66,
    "wins": 3,
    "lasts": 5,
-   "bust_rate": 0.038,
-   "bb100": 21.0,
-   "ev_bb100": 22.8,
-   "vpip": 0.224,
-   "pfr": 0.094,
-   "bigcalls100": 0.64,
-   "fallback_rate": 0.0079
+   "bust_rate": 0.034,
+   "bb100": 24.5,
+   "ev_bb100": 26.2,
+   "vpip": 0.223,
+   "pfr": 0.086,
+   "bigcalls100": 0.57,
+   "fallback_rate": 0.007
   }
  },
  "busts": [
@@ -667,6 +667,18 @@
    "name": "local hint v3, same 6 seeds (llama 27B, thinking off)",
    "kind": "local",
    "result": "0/76 format errors; 1 bust (KK call-off, allowed); VPIP 0% in 3/6 games (too passive?), -185.5 BB. Watch OPSD ckpt VPIP: if <15%, loosen opening/steal ranges (v4)."
+  },
+  {
+   "time": "2026-11-14 22:31:38",
+   "name": "freed GPUs",
+   "kind": "ops",
+   "result": "deleted idle \ud83d\udc40 entry (infer_2ff17466cceb) and my idle base, per user; OPSD v3mix still needs teammate RL to finish"
+  },
+  {
+   "time": "2026-11-14 22:34:23",
+   "name": "arena analysis: live solver-spot step 20 (29 games, 870 hands)",
+   "kind": "analysis",
+   "result": "1 bust (J3s call-off), avg place ~3.7; weak-tight: open-raise 12% vs limp 14%, 3-bet 3%, 0 postflop raises, BTN -19.5 BB, wins 69% of showdowns (folds too much), calls down middle pairs. Fix = hint v4 (no limping, steals, value)."
   }
  ],
  "replays": [
@@ -691,6 +703,10 @@
    "label": "11-15 06:07 UTC \u00b7 place 4 \u00b7 -11 bb"
   },
   {
+   "id": "m_20261115t060608_d5c352",
+   "label": "11-15 06:06 UTC \u00b7 place 5 \u00b7 -0 bb"
+  },
+  {
    "id": "m_20261115t060553_da2085",
    "label": "11-15 06:05 UTC \u00b7 place 6 \u00b7 -18 bb"
   },
@@ -703,20 +719,16 @@
    "label": "11-15 06:05 UTC \u00b7 place 4 \u00b7 -26 bb"
   },
   {
+   "id": "m_20261115t060508_2f27d3",
+   "label": "11-15 06:05 UTC \u00b7 place 2 \u00b7 +50 bb"
+  },
+  {
+   "id": "m_20261115t060452_4f5c62",
+   "label": "11-15 06:04 UTC \u00b7 place 3 \u00b7 +0 bb"
+  },
+  {
    "id": "m_20261115t055348_996ab4",
    "label": "11-15 05:53 UTC \u00b7 place 6 \u00b7 -42 bb"
-  },
-  {
-   "id": "m_20261115t055329_3c7fc4",
-   "label": "11-15 05:53 UTC \u00b7 place 3 \u00b7 -4 bb"
-  },
-  {
-   "id": "m_20261115t055248_1dc80a",
-   "label": "11-15 05:52 UTC \u00b7 place 4 \u00b7 -7 bb"
-  },
-  {
-   "id": "m_20261115t055230_c56e27",
-   "label": "11-15 05:52 UTC \u00b7 place 4 \u00b7 -12 bb"
   }
  ]
 }
