@@ -1,6 +1,6 @@
 {
  "status": {
-  "time": "2026-11-15 03:27:33",
+  "time": "2026-11-15 04:27:07",
   "rank": 11.0,
   "rating": 1071.0,
   "bb100": -4.5,
@@ -1251,6 +1251,12 @@
    "name": "v6 results",
    "kind": "eval",
    "result": "sh-select: busts 2.0/100 (best), weak call-offs 1.8 (best), but fmt errors 5.6% (21 no-JSON, 7 update_scratchpad mid-hand, 4 token cap) -> score 8.81 < v4 9.00; games12: 0 busts/21 but chips 234 = control, notes barely learned (shover 4/36). NOT candidate. Cause: including scratchpad turns in OPSD confused the tools. Next: RL v2 from v6 (pipeline_rl2.sh) to train out format errors while keeping low busts."
+  },
+  {
+   "time": "2026-11-15 04:28:18",
+   "name": "v10 prompt test (Vals + notes)",
+   "kind": "eval",
+   "result": "busts 1/36 (best survival) but chips 191-212 (< control 231, notes 318), VPIP 11% PFR 9% (too tight); place = control. v10 OPSD training failed at final save (AC2), step-9 ckpt ckpt_0a19c764c8d4 deployed as v10-s9 for evals. RL v2 from v6 pending (teammate RL holds GPUs)."
   }
  ],
  "replays": [
