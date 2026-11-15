@@ -1,6 +1,6 @@
 {
  "status": {
-  "time": "2026-11-15 06:27:14",
+  "time": "2026-11-15 07:27:09",
   "rank": 11.0,
   "rating": 1071.0,
   "bb100": -4.5,
@@ -1269,6 +1269,12 @@
    "name": "06:30 decision: v10-s9 -> BEST CHECKED CANDIDATE",
    "kind": "decision",
    "result": "sh-select score 9.106 (v4 9.003), busts 0.6/100 (v4 4.6), junk call-offs 0.4 (4.8); games12 busts 1/36, place = control, chips 205 vs 231; play_local 0/5. Talk (chaos/bluff) dropped: opponents ignore it, chaos hurts. v8 dropped (no chip gain)."
+  },
+  {
+   "time": "2026-11-15 07:28:06",
+   "name": "07:30 check-in",
+   "kind": "ops",
+   "result": "arena site down, v10-s9 not yet submitted. Resumed v10 OPSD (steps 10-19) non-preemptible train_35aab3c2c9a8 -> v10-s19. RL v2 stops were likely AC2 preemption; added --non-preemptible to rl/opsd train.py."
   }
  ],
  "replays": [
