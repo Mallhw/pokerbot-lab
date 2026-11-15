@@ -1,13 +1,13 @@
 {
  "status": {
-  "time": "2026-11-15 00:09:51",
-  "rank": 12.0,
-  "rating": 1015.0,
-  "bb100": -10.1,
-  "matches": 154.0,
+  "time": "2026-11-15 00:18:26",
+  "rank": 8.0,
+  "rating": 1095.0,
+  "bb100": -8.1,
+  "matches": 170.0,
   "deployment": "infer_496116c2999d"
  },
- "new_matches": 0,
+ "new_matches": 16,
  "entries": {
   "base (infer_66b2ff75a081)": {
    "games": 40,
@@ -49,17 +49,30 @@
    "fallback_rate": 0.3108
   },
   "solver-GRPO step 21 (54.7% agree) (infer_5fe0799751ef)": {
-   "games": 74,
-   "mean_place": 3.72,
+   "games": 82,
+   "mean_place": 3.68,
    "wins": 9,
-   "lasts": 9,
-   "bust_rate": 0.041,
-   "bb100": -4.9,
-   "ev_bb100": -0.0,
-   "vpip": 0.221,
+   "lasts": 10,
+   "bust_rate": 0.037,
+   "bb100": -2.2,
+   "ev_bb100": 2.2,
+   "vpip": 0.22,
    "pfr": 0.092,
-   "bigcalls100": 0.41,
-   "fallback_rate": 0.0056
+   "bigcalls100": 0.37,
+   "fallback_rate": 0.0059
+  },
+  "opsd4-s30 (infer_496116c2999d)": {
+   "games": 8,
+   "mean_place": 3.25,
+   "wins": 0,
+   "lasts": 0,
+   "bust_rate": 0.125,
+   "bb100": -3.1,
+   "ev_bb100": -23.4,
+   "vpip": 0.138,
+   "pfr": 0.098,
+   "bigcalls100": 0.44,
+   "fallback_rate": 0.0148
   }
  },
  "busts": [
@@ -645,10 +658,31 @@
     "2s",
     "Js"
    ]
+  },
+  {
+   "match": "m_20261115t075758_69c118",
+   "entry": "opsd4-s30 (infer_496116c2999d)",
+   "hand": 15,
+   "hole": [
+    "2s",
+    "2h"
+   ],
+   "chen": 5,
+   "actions": [
+    "raise",
+    "bet"
+   ],
+   "board": [
+    "5s",
+    "9h",
+    "Jc",
+    "Ac",
+    "Qd"
+   ]
   }
  ],
- "weak_busts": 17,
- "total_busts": 27,
+ "weak_busts": 18,
+ "total_busts": 28,
  "experiments": [
   {
    "time": "2026-11-14 21:02:11",
@@ -763,56 +797,80 @@
    "name": "v4 step 29 (opsd4-s30) went live in arena ~00:08",
    "kind": "arena",
    "result": "stopped its sh-select eval immediately to avoid overloading the live deployment; s20 eval (separate deployment) continues"
+  },
+  {
+   "time": "2026-11-15 00:11:22",
+   "name": "play_local check opsd4-s20 (6 hands vs bots)",
+   "kind": "check",
+   "result": "0/6 failed decisions, -1.5 BB. s30 check stopped (went live); monitor its arena fallback rate."
+  },
+  {
+   "time": "2026-11-15 00:20:30",
+   "name": "v4 s20 on sh-select (241/500 hands, stopped early to free GPUs)",
+   "kind": "eval",
+   "result": "score 9.14 vs base 8.845; busts 4.6/100 vs 13.6; weak call-offs 2.9/100 vs 15.4; fmt err 3.6% (token cap); VPIP 12%"
+  },
+  {
+   "time": "2026-11-15 00:20:30",
+   "name": "v4 s29 live in arena (first 8 games)",
+   "kind": "arena",
+   "result": "avg place 3.25, 1 bust, VPIP 14% PFR 10%; team rank #8 rating 1095 (best yet)"
+  },
+  {
+   "time": "2026-11-15 00:20:30",
+   "name": "GRPO from v4 s29 on bot tables (2 shovers, maniac, nit, station, random), bust-penalty grader, 40 steps",
+   "kind": "train",
+   "result": "running 00:21"
   }
  ],
  "replays": [
   {
-   "id": "m_20261115t074940_678178",
-   "label": "11-15 07:49 UTC \u00b7 place 3 \u00b7 -14 bb"
+   "id": "m_20261115t075813_52c410",
+   "label": "11-15 07:58 UTC \u00b7 place 2 \u00b7 +83 bb"
   },
   {
-   "id": "m_20261115t073520_535fbd",
-   "label": "11-15 07:35 UTC \u00b7 place 2 \u00b7 +54 bb"
+   "id": "m_20261115t075758_69c118",
+   "label": "11-15 07:57 UTC \u00b7 place 5 \u00b7 -100 bb"
   },
   {
-   "id": "m_20261115t073435_6c10e5",
-   "label": "11-15 07:34 UTC \u00b7 place 6 \u00b7 -100 bb"
+   "id": "m_20261115t075730_2b642f",
+   "label": "11-15 07:57 UTC \u00b7 place 2 \u00b7 +6 bb"
   },
   {
-   "id": "m_20261115t073421_bdd8d4",
-   "label": "11-15 07:34 UTC \u00b7 place 4 \u00b7 -14 bb"
+   "id": "m_20261115t075652_ff43d0",
+   "label": "11-15 07:56 UTC \u00b7 place 2 \u00b7 +13 bb"
   },
   {
-   "id": "m_20261115t073118_82f52f",
-   "label": "11-15 07:31 UTC \u00b7 place 1 \u00b7 +9 bb"
+   "id": "m_20261115t075637_bd502a",
+   "label": "11-15 07:56 UTC \u00b7 place 4 \u00b7 -1 bb"
   },
   {
-   "id": "m_20261115t073102_b37347",
-   "label": "11-15 07:31 UTC \u00b7 place 6 \u00b7 -28 bb"
+   "id": "m_20261115t075622_83f888",
+   "label": "11-15 07:56 UTC \u00b7 place 3 \u00b7 -2 bb"
   },
   {
-   "id": "m_20261115t072832_497626",
-   "label": "11-15 07:28 UTC \u00b7 place 5 \u00b7 -11 bb"
+   "id": "m_20261115t075607_7c3aa9",
+   "label": "11-15 07:56 UTC \u00b7 place 4 \u00b7 +2 bb"
   },
   {
-   "id": "m_20261115t072529_dd531c",
-   "label": "11-15 07:25 UTC \u00b7 place 4 \u00b7 -48 bb"
+   "id": "m_20261115t075552_4bda00",
+   "label": "11-15 07:55 UTC \u00b7 place 4 \u00b7 -8 bb"
   },
   {
-   "id": "m_20261115t072514_275845",
-   "label": "11-15 07:25 UTC \u00b7 place 4 \u00b7 +6 bb"
+   "id": "m_20261115t075523_ab1398",
+   "label": "11-15 07:55 UTC \u00b7 place 2 \u00b7 +6 bb"
   },
   {
-   "id": "m_20261115t072429_028b89",
-   "label": "11-15 07:24 UTC \u00b7 place 5 \u00b7 -18 bb"
+   "id": "m_20261115t075421_769fd6",
+   "label": "11-15 07:54 UTC \u00b7 place 4 \u00b7 -10 bb"
   },
   {
-   "id": "m_20261115t072328_c71d88",
-   "label": "11-15 07:23 UTC \u00b7 place 3 \u00b7 +15 bb"
+   "id": "m_20261115t075110_96b5fb",
+   "label": "11-15 07:51 UTC \u00b7 place 2 \u00b7 +12 bb"
   },
   {
-   "id": "m_20261115t072312_90b600",
-   "label": "11-15 07:23 UTC \u00b7 place 4 \u00b7 -10 bb"
+   "id": "m_20261115t075038_bc6052",
+   "label": "11-15 07:50 UTC \u00b7 place 4 \u00b7 -4 bb"
   }
  ]
 }
