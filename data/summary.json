@@ -1413,6 +1413,18 @@
    "name": "RL v3 from v10-s9 launched",
    "kind": "train",
    "result": "train_29d356cee24f on pokerbots-rl2 (LLM opps + shover + maniac, bust_penalty 3), 30 steps; auto-eval as rl3-s30"
+  },
+  {
+   "time": "2026-11-15 08:27:22",
+   "name": "check-in 08:27",
+   "kind": "ops",
+   "result": "v10-s9 live (infer_f617937bbaa3), team #6 rating 1142, 492 matches; v10-s19 evals still running; RL v3 train_29d356cee24f pending GPU"
+  },
+  {
+   "time": "2026-11-15 08:53:42",
+   "name": "v10-s19 result",
+   "kind": "eval",
+   "result": "DROP: sh-select 9.069 vs v10-s9 9.106, busts 2.0 vs 0.6/100; games12 paired chips 199 vs 201, busts 0 vs 1, fallbacks 2.9% vs 1.1%. Keep v10-s9 (live)."
   }
  ],
  "replays": [
