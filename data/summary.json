@@ -1,6 +1,12 @@
 {
  "status": {
-  "time": "2026-11-15 03:27:12"
+  "time": "2026-11-15 03:27:33",
+  "rank": 11.0,
+  "rating": 1071.0,
+  "bb100": -4.5,
+  "matches": 290.0,
+  "deployment": "infer_496116c2999d",
+  "site_unavailable": true
  },
  "new_matches": 0,
  "entries": {
@@ -1227,6 +1233,24 @@
    "name": "v6-s20 deployed + checked",
    "kind": "check",
    "result": "probe ok; play_local 1 unreadable reply (watch fmt errors); evals: sh-select eval_efddd596cc0f, games12-control eval_80f62e7eb7eb (no hint)"
+  },
+  {
+   "time": "2026-11-15 03:27:57",
+   "name": "check-in 03:27",
+   "kind": "ops",
+   "result": "pokerbots.ac DOWN (\"database is unavailable / quota exceeded\" on their side); arena.py now keeps last known status (live = v4 infer_496116c2999d, #11, 1071). v4 13 more games as Alea iacta est: bust 8%, EV +10. games12-v10 prompt eval failed on AC2 (No space left on device, their side) -> relaunched eval_d2411489bbab. Running: v10 OPSD, v6 evals, v7. Teammate pbspot2-r4 pending."
+  },
+  {
+   "time": "2026-11-15 03:30:50",
+   "name": "v7 result (notes used at decision time + maniac defense)",
+   "kind": "eval",
+   "result": "best shover detection (13/36 vs 2-5 others) but chips 228 = control, busts 3/21 = control (paired 21 games) -> DROP; simple notes still best (318 chips, 1 bust). Talk pipeline fixed to never force-restart harness2."
+  },
+  {
+   "time": "2026-11-15 04:09:29",
+   "name": "v6 results",
+   "kind": "eval",
+   "result": "sh-select: busts 2.0/100 (best), weak call-offs 1.8 (best), but fmt errors 5.6% (21 no-JSON, 7 update_scratchpad mid-hand, 4 token cap) -> score 8.81 < v4 9.00; games12: 0 busts/21 but chips 234 = control, notes barely learned (shover 4/36). NOT candidate. Cause: including scratchpad turns in OPSD confused the tools. Next: RL v2 from v6 (pipeline_rl2.sh) to train out format errors while keeping low busts."
   }
  ],
  "replays": [
